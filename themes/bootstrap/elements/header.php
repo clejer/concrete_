@@ -8,16 +8,21 @@
 
     <!-- Le styles -->
 	<link href="themes/bootstrap/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Wendy+One' rel='stylesheet' type='text/css'>
     <link href="themes/bootstrap/assets/css/main.css" rel="stylesheet">
-   <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
+ 
     <style>    
+	 h1,h2,h3,h4 { 
+		font-family: 'Wendy One', sans-serif;
+	  }
       footer {
       	margin-top: 1em;
       	padding-top: 0.5em;
       	border-top: solid 2px #ddd;
       }
     </style>
-  <!--  <link href="assets/css/bootstrap-min.css" rel="stylesheet"> -->
+  
+  <link href="<?php echo $this->getThemePath();?>/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -39,9 +44,8 @@
           <a class="brand" href="#">Project name</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="active"><<?php $a=new Area('menu'); 
+								$a->display($c);?></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
